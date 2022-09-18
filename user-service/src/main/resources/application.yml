@@ -1,0 +1,26 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/userservice
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 10
+      idle-timeout: 30000
+      pool-name: quartz-pool-cp
+      max-lifetime: 200000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+
+
+
+
